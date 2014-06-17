@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Since the blog is running on port 8080 of geospatial.mit.edu, the resources for the CSS and JS are loaded from the absolute path "geospatial.mit.edu/assets"-->
+	
+    <link rel="shortcut icon" href="http://geospatial.mit.edu/favicon.ico">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="http://geospatial.mit.edu/asse	ts/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+	 <link rel="shortcut icon" href="http://geospatial.mit.edu/favicon.ico">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="http://geospatial.mit.edu/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href='http://geospatial.mit.edu/assets/css/style.css'>
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="http://geospatial.mit.edu/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="http://geospatial.mit.edu/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="http://geospatial.mit.edu/assets/css/themes/default.css" id="style_color">
+	<link rel="stylesheet" href="http://geospatial.mit.edu/assets/plugins/zrssfeed/jquery.zrssfeed.css" >
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="http://geospatial.mit.edu/assets/css/custom.css">
+	
+	<script type="text/javascript" src="http://geospatial.mit.edu/assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://geospatial.mit.edu/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://geospatial.mit.edu/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+<!-- JS Page Level -->           
+</head>
+<body class="wrapper">
+	    <div class="header">   
+ <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img id="logo-header" src="http://geospatial.mit.edu/assets/img/logo1-default.png" alt="Logo">
+                    </a>
+                </div>
+
+     <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+			<li><a href="http://geospatial.mit.edu/index.html">Home</a></li>
+			<li><a href="http://geospatial.mit.edu/directory.html">Directory</a></li>
+						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Leadership</a>
+						
+                <ul class="dropdown-menu">
+                    
+                       <li><a href="http://geospatial.mit.edu/directors.html">Directors</a></li>
+                    
+                       <li><a href="http://geospatial.mit.edu/ab_geospatialtech.html">Advisory Board - Geospatial Technology</a></li>
+                    
+                       <li><a href="http://geospatial.mit.edu/ab_geocodedmedia.html">Advisory Board - Geocoded Media</a></li>
+                    
+                       <li><a href="http://geospatial.mit.edu/ab_geocentric.html">Advisory Board - Geocentric Cyber Security</a></li>
+                    
+                       <li><a href="http://geospatial.mit.edu/ab_geolocated_supplychain.html">Advisory Board - Geolocated Supply Chain</a></li>
+                    
+                       <li><a href="http://geospatial.mit.edu/leadership_committee.html">Leadership Committee</a></li>
+                    
+                </ul>
+			</li>
+			<li><a href="http://geospatial.mit.edu/papers.html">Papers</a></li>
+			<li><a href="http://geospatial.mit.edu/teaching.html">Teaching</a></li>
+			<li ><a href="http://geospatial.mit.edu/videos.html">Videos</a></li>
+			<li class="active"><a href="http://geospatial.mit.edu:8080/">Blog</a></li>
+    		</ul>
+	</div><!--/navbar-collapse-->
+            </div>    
+        </div>  
+
+			<!-- end nav bar -->
+    </div>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+   <div class="footer">
+        <div class="container">
+            <div class="row">               
+                <div class="col-md-4 md-margin-bottom-40">
+					<div class="posts">
+                        <div class="headline"><h2>Recent Blog Posts</h2></div>
+						<div id="testi"></div>
+                       </div>                  
+                </div><!--/col-md-4-->
+
+                <div class="col-md-4">
+                    <!-- Contact Us -->
+                    <div class="headline"><h2>Contact Us</h2></div> 
+					<br>
+					<div id="result"></div>
+ <form id="contact_form">
+                    <label>Name</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-7 col-md-offset-0">
+                            <input type="text" class="form-control" id="contact_name">
+                        </div>                
+                    </div>
+                    
+                    <label>Email</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-7 col-md-offset-0">
+                            <input type="text" class="form-control" id="contact_email">
+                        </div>                
+                    </div>
+                    
+                    <label>Message</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-11 col-md-offset-0">
+                            <textarea rows="8" class="form-control" id="contact_message"></textarea>
+                        </div>                
+                    </div>
+                    
+                    <p><button type="button" class="btn-u" id="submit_btn">Send Message</button></p>
+                </form>
+                </div><!--/col-md-4-->
+            </div>
+        </div> 
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+<div class="site-map">
+					<div id="sitemap">
+							<ul>
+								<li><a href="http://geospatial.mit.edu/index.html">Home</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/directory.html">Directory</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/leadership.html">Leadership</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/team.html">Team</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/papers.html">Papers</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/teaching.html">Teaching</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/join.html">Join Us</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/partnerships.html">Partnerships</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/videos.html">Videos</a>&nbsp;|&nbsp; </li>
+								<li><a href="http://geospatial.mit.edu/blog">Blog</a>&nbsp;|&nbsp; </li>
+						</ul>
+					</div>
+</div>
+				  <a href="http://geospatial.mit.edu/index.html">
+                        <img class="pull-right" id="logo-footer" src="http://geospatial.mit.edu/assets/img/mit-greywhite-footer3.gif" alt="">
+                    </a>
+            </div>
+        </div> 
+    </div><!--/copyright--> 
+
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+	<script type="text/javascript" src="http://geospatial.mit.edu/assets/plugins/zrssfeed/jquery.zrssfeed.js"></script>
+<!--	<script type="text/javascript" src="http://geospatial.mit.edu/assets/js/app.js"></script>-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+		$("#submit_btn").click(function(){
+				var output = "";
+				var name = $("#contact_name").val();
+				var email = $("#contact_email").val();	
+				var message = $("#contact_message").val();
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			
+				var iscorrect = true;
+				
+				if (name == "" || name==null ){
+					$("#contact_name").addClass("entry_error");
+					iscorrect = false;	
+				}
+				if (email == "" || email == null || !filter.test(email)){
+					$("#contact_email").addClass("entry_error");
+					iscorrect = false;	
+				}
+				if (message == "" || message == null ){
+					$("#contact_message").addClass("entry_error");
+					iscorrect = false;	
+				}
+			
+				if(iscorrect) {
+					var post_data = {'name':name,'email':email,'message':message};
+					
+					$.post("contacto.php",post_data,function(response){
+						if (response.type == "error"){
+							output = '<div class="error">' + response.text  + '</div>';
+						} else {
+							output = '<div class="success">' + response.text  + '</div>';
+							$("#contact_form input").val("");
+							$("#contact_form textarea").val("");
+						}
+						
+						$("#result").hide().html(output).slideDown();
+						
+					},'json');
+					
+				}
+
+	 });		
+			
+    $("#contact_form input").keyup(function() { 
+        $("#contact_form input").removeClass('entry_error'); 
+        $("#result").slideUp();
+    });
+	$("#contact_form textarea").keyup(function() { 
+        $("#contact_form textarea").removeClass('entry_error'); 
+        $("#result").slideUp();
+    });    
+
+	$('#testi').rssfeed('http://geospatial.mit.edu:8080/rss',{limit:3,header:false},function(e){
+		
+		$('h4 a',e).each(function(i) {
+			var title = $(this).text();
+			if (title.length > 14) $(this).text(title.substring(0,60)+'...');
+		});
+
+	$('h4 a',e).each(function(i) {
+			var url = $(this).attr("href");
+			var post = "http://geospatial.mit.edu:8080/" + url.substring(url.lastIndexOf('/',url.length-2)+1);	
+			$(this).attr("href",post);
+		});
+
+		
+	});	
+
+				
+ });
+</script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+	
+
+</body>
+</html>

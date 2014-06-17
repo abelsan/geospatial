@@ -53,11 +53,15 @@
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-responsive-collapse">
+     <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-			<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">{{ title }}</a>
+						{{#equal title "Home" }}
+						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
+						{{else}}
+						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
+						{{/equal}}
                 <ul class="dropdown-menu">
                     {{#each subnav}}
                        <li><a href="{{ link }}">{{ title }}</a></li>
@@ -65,11 +69,15 @@
                 </ul>
 			</li>
 			{{else}}
+			{{#equal title "Home" }}
+			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
+			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
+			{{/equal}}
             {{/if}}
         {{/each}}
-    </ul>
-                </div><!--/navbar-collapse-->
+    	</ul>
+	</div><!--/navbar-collapse-->
             </div>    
         </div>  
 	</script>
@@ -216,22 +224,12 @@
                 </h2>
                 <p class="text-justify">Cyber-physical security-related queries and analytics run on traditional relational databases can take many hours to return. Furthermore, programming analytics on distributed databases requires great skill, and there is a shortage of such talent worldwide. In this talk on computational intelligence within cyber security, we will review developments of processing large datasets in-memory using a coherent shared memory approach. The coherent shared memory approach allows programmers to view a cluster of servers as a system with a single large RAM.</p>
             </div>
-<!--            <div class="col-md-4">
-                <h2 class="heading-sm">
-                    <a class="link-bg-icon" href="#">
-                        <i class="icon-custom icon-sm rounded-x icon-bg-dark icon-line icon-rocket"></i>
-                        <span>Launch Ready</span>
-                    </a>
-                </h2>
-                <p class="text-justify">At vero eos et accusamus et iusto odio dignissimos ducimus. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been..</p>
-            </div>-->
         </div>
 
         <div class="row content-boxes-v2 margin-bottom-30">
             <div class="col-md-4 md-margin-bottom-30">                
                 <h2 class="heading-sm">
                     <a class="link-bg-icon" >
-                        <!--<i class="icon-custom icon-sm rounded-x icon-bg-dark icon-line icon-support"></i>-->
 						<img src="assets/img/old/fbox3.png" />
                         <span>Big Data Lab</span>
                     </a>
@@ -249,67 +247,33 @@
             </div>
         </div>
     	<!-- Our Clients -->
-    	<div id="clients-flexslider" class="flexslider home clients">
+<script id="partnerships-template" type="text/x-handlebars-template">
+<div id="clients-flexslider" class="flexslider home clients">
             <div class="headline"><h2>Partnerships</h2></div>	
     		<ul class="slides">
-    			<li style="width:250px !important;">
+    		{{#each partnership}}  	
+			{{#equal title "Sociotechnical Systems Research Center"}}
+			<li style="width: 250px !important; float: left; display: block;" >
                     <a>
-                        <img src="assets/img/partners/ssrc_logo_60_gray.jpg" alt="" style="width: 215px;" /> 
-                        <img src="assets/img/partners/ssrc_logo_60.png" class="color-img" alt="" style="width: 215px;left: 17px;" />
+                        <img src="{{img_url_gray}}"  alt="{{title}}" style="width: 215px;"/>
+						 <img src="{{img_url}}" class="color-img" alt="" style="width: 215px;left: 17px;"  />
                     </a>
-                </li>
-    			<li>
+						<h5>{{{text}}}</h5>
+             </li>
+			{{else}}
+			<li style="width: 127.66666666666667px; float: left; display: block;">
                     <a>
-                        <img src="assets/img/partners/iesl_logo_gray.png" alt="" /> 
-                        <img src="assets/img/partners/iesl_logo.png" class="color-img" alt="" />
+						<img src="{{img_url_gray}}"  alt="{{text}}" />
+                        <img src="{{img_url}}"  alt="{{text}}" class="color-img" />
                     </a>
-											<h5>Geospatial Data Center Cyber Physical Security Group</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/NEIOC_60_gray.jpg" alt="" /> 
-                        <img src="assets/img/partners/NEIOC_60.jpg" class="color-img" alt="" />
-                    </a>
-						<h5>Department of Defense, Northeast Information Ops Center</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/oxford_60_gray.png" alt="" /> 
-                        <img src="assets/img/partners/oxford_60.png" class="color-img" alt="" />
-                    </a>
-				<h5>MIT-Oxford Cyber Reputation Collaboration</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/harvard_kennedy_60_gray.png" alt="" /> 
-                        <img src="assets/img/partners/harvard_kennedy_60.png" class="color-img" alt="" />
-                    </a>
-					<h5>MIT-Harvard<br>Cyber Leadership Courses</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/berkeley_gray.png" alt="" /> 
-                        <img src="assets/img/partners/berkeley.png" class="color-img" alt="" />
-                    </a>
-					<h5>Berkeley Center for New Media</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/mgh_60_gray.png" alt="" /> 
-                        <img src="assets/img/partners/mgh_60.png" class="color-img" alt="" />
-                    </a>
-					<h5>Harvard Medical School, MGH, Laboratory for Quantitative Medicine</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/fedex_gray.jpg" alt="" /> 
-                        <img src="assets/img/partners/fedex.jpg" class="color-img" alt="" />
-                    </a>
-					<h5>Fedex Institute of Technology<br>Center for<br>Information Assurance</h5>
-                </li>
-    			
+						<h5>{{{title}}}</h5>
+              </li>
+			{{/equal}}
+			{{/each}}
     		</ul>
-    	</div><!--/flexslider-->
+    	</div>
+		</script>
+		<div id="partnerships"></div>
     	<!-- End Our Clients -->
     </div><!--/container-->		
     <!-- End Content Part -->
@@ -389,6 +353,7 @@
 <script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="assets/plugins/handlebars-v1.3.0.js"></script>
 <script type="text/javascript" src="assets/temps/nav.js"></script>
+<script type="text/javascript" src="assets/temps/partnerships.js"></script>
 <script type="text/javascript" src="assets/temps/footer.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
@@ -478,10 +443,22 @@
 	
 			
 	});
+		
+		Handlebars.registerHelper('equal', function(key, value, options) {
+  		if(key == value) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+  		}
+		});
 
 		var nav = $("#nav-template");
 		var template = Handlebars.compile(nav.html());
 		$('#nav').html(template(nav_data));
+		
+		var partnerships = $("#partnerships-template");
+		var template = Handlebars.compile(partnerships.html());
+		$('#partnerships').html(template(partnerships_data));
 		
 		var sitemap = $("#sitemap-template");
 		var template = Handlebars.compile(sitemap.html());

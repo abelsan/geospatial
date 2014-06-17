@@ -1,0 +1,85 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+
+{{! The main content area on the homepage }}
+
+
+    {{! Each post will be output using this markup }}
+<div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">{{@blog.title}}</h1>
+        </div>
+    </div>
+
+<main class="container content" role="main" >
+	<div class="row blog-page">
+		
+		<div class="col-md-9 md-margin-bottom-40" >
+    {{#foreach posts}}
+	
+    <article class="row blog blog-medium margin-bottom-40">
+		
+		   <div class="col-md-3">
+           {{content words="0"}}
+&hellip;
+        </div>
+
+			<div class="col-md-7">
+				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                        <ul class="list-unstyled list-inline blog-info">
+                            <li><i class="fa fa-calendar"></i>&nbsp;<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span></li>
+                        </ul>
+                        <p>	{{excerpt}}</p>
+                        <p><a class="btn-u btn-u-small" href="{{url}}"><i class="fa fa-location-arrow"></i> Read More</a></p>
+                    </div>
+		
+		
+		</article>
+	
+			
+
+    {{/foreach}}
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+		
+		</div>
+		
+		<div class="col-md-3">
+                <!-- Social Icons -->
+                <!-- End Social Icons -->
+                <!-- Posts -->
+                <!-- End Posts -->
+            	<!-- Tabs Widget -->
+            	<div class="headline headline-md"></div>
+                <div class="tab-v2 margin-bottom-40">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home-1">About Us</a></li>
+                        <li><a data-toggle="tab" href="#home-2">Our Team</a></li>
+                    </ul>                
+                    <div class="tab-content">
+                        <div id="home-1" class="tab-pane active">
+                            <p>The MIT Geospatial Data Center is the uniting force of MIT's Auto-ID labs, the Geonumerics Group, the Center for Grid Computing, and the Intelligent Engineering Systems Laboratory. </p>                        
+                        </div>
+                        <div id="home-2" class="tab-pane magazine-sb-categories">
+						<p>The MIT GDC Team consists of MIT Faculty, Research Staff, Center Staff, Visiting Scholars and Scientists, Affiliated Researchers, Undergraduate Students, and Graduate Students. These Honored Team Members care deeply about properly architecting and engineering the next-generation geospatial platform for public participation and benefit.</p>    
+							<a href="{{@blog.url}}/directory.html"><h4>Read more here</h4></a>
+                        </div>
+                    </div>
+                </div>            
+                <!-- End Tabs Widget -->
+            	<!-- Photo Stream -->
+            	<div class="headline headline-md"><h2>Photos</h2></div>
+                <ul class="list-unstyled blog-photos margin-bottom-30">
+					  {{#foreach posts}}
+                    <li><a href="{{url}}" class="hover-effect" title="{{title}}" alt="{{title}}">{{content words="0"}}</a></li>
+					  {{/foreach}}
+                </ul>
+                <!-- End Photo Stream -->
+            </div>
+</div>
+</main>

@@ -64,7 +64,7 @@
             {{/if}}
         {{/each}}
     </ul>
-                </div><!--/navbar-collapse-->
+	</div><!--/navbar-collapse-->
             </div>    
         </div>         
 		</script>
@@ -87,58 +87,31 @@
  <!--/row-fluid-->        
 		<div class="row-fluid">
     	<div >
-    		<ul class="partnerships">
-    			<li style="width:250px !important;">
+	<script id="partnerships-template" type="text/x-handlebars-template">
+		<ul class="partnerships">
+			{{#each partnership}}  	
+			{{#equal title "Sociotechnical Systems Research Center"}}
+			<br>
+			<li>
                     <a>
-                        <img src="assets/img/partners/ssrc_logo_60.png" alt="" style="width: 250px;left:0%;" />
+                        <img src="{{img_url}}"  alt="{{title}}" style="width: 250px;left:0%;"/>
                     </a>
-                </li>
-				<br>
-    			<li>
+						<h5>{{{text}}}</h5>
+             </li>
+			<br>
+			{{else}}
+			<li>
                     <a>
-                        <img src="assets/img/partners/iesl_logo.png"  alt="" />
+                        <img src="{{img_url}}"  alt="{{text}}" />
                     </a>
-											<h5>Geospatial Data Center Cyber Physical Security Group</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/NEIOC_60.jpg"  alt="" />
-                    </a>
-						<h5>Department of Defense, Northeast Information Ops Center</h5>
-                </li>
-    			<li>
-                    <a>
-                                              <img src="assets/img/partners/oxford_60.png"  alt="" />
-                    </a>
-				<h5>MIT-Oxford Cyber Reputation Collaboration</h5>
-                </li>
-    			<li>
-                    <a>
-                       
-                        <img src="assets/img/partners/harvard_kennedy_60.png" alt="" />
-                    </a>
-					<h5>MIT-Harvard<br>Cyber Leadership Courses</h5>
-                </li>
-    			<li>
-                    <a>
-                        <img src="assets/img/partners/berkeley.png"  alt="" />
-                    </a>
-					<h5>Berkeley Center for New Media</h5>
-                </li>
-    			<li>
-                    <a> 
-                        <img src="assets/img/partners/mgh_60.png"  alt="" />
-                    </a>
-					<h5>Harvard Medical School, MGH, Laboratory for Quantitative Medicine</h5>
-                </li>
-    			<li>
-                    <a>
-                     <img src="assets/img/partners/fedex.jpg"  alt="" />
-                    </a>
-					<h5>Fedex Institute of Technology<br>Center for<br>Information Assurance</h5>
-                </li>
-    			
-    		</ul>
+						<h5>{{{title}}}</h5>
+              </li>
+			<br>
+			{{/equal}}
+			{{/each}}
+		</ul>
+		</script>
+		<div id="partnerships"></div>
     	</div>     
         </div><!--/row-fluid-->     	
 		  		
@@ -219,6 +192,7 @@
 <script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="assets/plugins/handlebars-v1.3.0.js"></script>
 <script type="text/javascript" src="assets/temps/nav.js"></script>
+<script type="text/javascript" src="assets/temps/partnerships.js"></script>
 <script type="text/javascript" src="assets/temps/footer.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
@@ -295,9 +269,21 @@
 				
 	});
 		
+		Handlebars.registerHelper('equal', function(key, value, options) {
+  		if(key == value) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+  		}
+		});		
+		
 		var nav = $("#nav-template");
 		var template = Handlebars.compile(nav.html());
 		$('#nav').html(template(nav_data));
+		
+		var partnerships = $("#partnerships-template");
+		var template = Handlebars.compile(partnerships.html());
+		$('#partnerships').html(template(partnerships_data));
 		
 		var sitemap = $("#sitemap-template");
 		var template = Handlebars.compile(sitemap.html());

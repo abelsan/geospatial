@@ -1,0 +1,59 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+	
+
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+<div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">{{{title}}}</h1>
+        </div>
+    </div>
+<br>
+<main class="container content" role="main">
+    <article class="row blog blog-medium margin-bottom-40">
+    <article class="row blog blog-medium margin-bottom-40">
+            <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{tags prefix="on " separator=" | "}}</span>
+
+            <h1 class="post-title">{{{title}}}</h1>
+			<br>
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <footer class="post-footer">
+
+                <section class="author">
+                    <ul class="author-meta clearfix">
+                        {{#if author.location}}<li>{{author.location}}</li>{{/if}}
+                        {{#if author.website}}<li><a href="{{author.website}}">{{author.website}}</a></li>{{/if}}
+                    </ul>
+                </section>
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <span class="hidden">Google+</span>
+                    </a>
+                </section>
+
+            </footer>
+
+        {{/post}}
+
+    </article>
+
+</main>
