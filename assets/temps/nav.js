@@ -13,7 +13,7 @@ var nav_data = {
 "subnav":[
 {
                "title":"Directors",
-               "link":"leadership.html"
+               "link":"directors.html"
             },
 {
                "title":"Advisory Board - Geospatial Technology",

@@ -1,7 +1,7 @@
 var directory_data = {
-"member":[	
-
-			{	"img":"assets/img/directory/john_thumbnail.jpg",
+	directory_1:[	
+		{
+			"img":"assets/img/directory/john_thumbnail.jpg",
 			"name":"John Williams",
 			"career":" Professor John Williams was recently named alongside Bill Gates and Larry Ellison as one of the 50 most powerful people for Computer Networks in the world. <br><br> He is a MIT Professor of Information Engineering within the Engineering Systems Division and Department of Civil and Environmental Engineering. He also heads the Grid/Agent Computing Program at MIT, which develops distributed systems that simulate U.S. critical infrastructure. <br><br> Most importantly, he serves as the Director for the MIT GDC (Auto-ID Lab, Geonumerics Group, Center for Grid Computing, and Intelligent Engineering Systems Lab).<br><br>Internet of Things Group; Intelligent Engineering Group; Software Architecture Group",
 			"references":[{"link":"http://esd.mit.edu/Faculty_Pages/williams/williams.htm",
@@ -14,7 +14,7 @@ var directory_data = {
 			"references":[{"link":"http://web.mit.edu/doval/www/",
 			"title":"Read more here"}]
 		},
-		{
+				{
 			"img":"assets/img/directory/MITGDC_ChristopherLeonardi_04.jpg",
 			"name":"Christopher Leonardi",
 			"career":"Dr. Leonardi holds a Ba. in Mechanical Engineering from James Cook University and a Ph.D. in Civil Engineering from Swansea University. His research interests include computational modeling of fluid-structure interaction, simulation of non-Newtonian flows, and characterization of the dynamic behavior of bulk materials. Particular fields of expertise include the lattice Boltzmann method (LBM) for fluid flows, the discrete element method (DEM) for discontinuous systems, and the finite element method (FEM) for solid mechanics problems.Outside of academic pursuits Dr. Leonardi has spent five years consulting to industry in the Australasian region, applying both computational and analytical techniques to solve problems in the mechanical, structural, and geotechnical engineering disciplines. Research efforts are targeted at the continued development of multi-physics numerical simulation software for application to oil reservoir modeling.<br><br>Internet of Things Group; Software Design Group; High Performance Computing Geospatial Platform Group"
@@ -29,21 +29,23 @@ var directory_data = {
 			"name":"Zeid Alghareeb",
 			"career":"Zeid received his Master of Science in Petroleum Engineering from Stanford University in 2009. Prior to joining GDC, Zeid worked as a petroleum engineer developing and maintaining oil increments at Saudi Aramco Oil Company. His main interests include production optimization, and pore scale modeling and analysis. Zeid is currently a PhD candidate at MIT and serves as a technical lead at GDC.<br><br>High Performance Computing Geospatial Platform Group"
 		},
-		{
+				{
 			"img":"assets/img/directory/MITGDC_MariaArenas.jpg",
 			"name":"Maria Arenas",
 			"career":"As MIT GDC Platform Visualization Lead in the Semantic Analysis Unit of the High Performance Computing Geospatial Platform Group, Maria works on converting our storyboard visualizations into functional platform demonstrations. These functional demonstrations are critical in the milestone development of the MIT Geospatial Platform<br><br>High Performance Computing Geospatial Platform Group"
 		},
-		{
+				{
 			"img":"assets/img/directory/MITGDC_MariosAssiotis.jpg",
 			"name":"Marios Assiotis",
 			"career":"Marios holds a Bachelor of Science in Computer Science and Engineering from MIT. He has worked as a software engineer with Apple Computer, a software developer with the MIT Comparative Media Studies, a systems administrator at the Teacher Education Department, and as a researcher with the MIT Media Lab.<br><br>IInternet of Things Group"
 		},
-		{
+					{
 			"img":"assets/img/directory/MITGDC_ZeyarAung.jpg",
 			"name":"Zeyar Aung",
 			"career":"Dr. Zeyar Aung is currently Assistant Professor in the Computing and Information Science Program of Masdar Institute. Dr. Aung graduated with a PhD in Computer Science from the National University of Singapore in 2006. Prior to joining Masdar Institute, he worked as a research fellow for Infocomm Research, A* Star (Agency for Science, Technology and Research), Singapore from 2006 to 2010. Dr. Aung’s areas of expertise include data mining, machine learning, database management, bioinformatics and chemoinformatics. He is a professional member of the International Society for Computational Biology (ISCB).<br><br>High Performance Computing Geospatial Platform Group"
-		},
+		}
+	],
+	directory_2: [
 		{
 			"img":"assets/img/directory/MITGDC_RidaChan.jpg",
 			"name":"Rida Chan",
@@ -83,8 +85,9 @@ var directory_data = {
 			"img":"assets/img/directory/MITGDC_FivosConstantinou.jpg",
 			"name":"Fivos Constantinou",
 			"career":"Fivos is currently a candidate for Master of Engineering with a Bachelor of Science in Computer Science and Engineering. He has interned with Microsoft and Google Inc., and worked as a software developer with the Cyprus Telecommunications Authority.<br><br>Internet of Things Group; Software Design Group"
-		},
-		{
+		}],
+	directory_3:[
+			{
 			"img":"assets/img/directory/MITGDC_KarenDavie.jpg",
 			"name":"Karen Davie",
 			"career":"Karen is a junior at MIT pursuing a degree in Electrical Engineering and Computer Science. Although her major interests are in software, she also enjoys hardware engineering. Outside of academics Karen participates on both the soccer and track teams.<br><br>Internet of Things Group; Software Development Group"
@@ -123,8 +126,8 @@ var directory_data = {
 			"img":"assets/img/directory/MITGDC_MaxLocher.jpg",
 			"name":"Max Locher",
 			"career":"Max graduated with a Master of Engineering in Logistics from MIT. Prior to MIT, he worked as an independent systems consultant to various companies. Max participated on multiple teams as Business Analyst, Systems Engineer, Systems Consultant, Project/Risk Manager, Applications Developer, DBA, Technical Writer and Trainer for Retek, Qwest, Xigent, Northwest Airlines, Boston Scientific/Scimed, Ziegler Power Systems, GMAC Mortgage, Ceridian and The Saint Paul.<br><br>Internet of Things Group"
-		},
-		{
+		}],
+	directory_4:[{
 			"img":"assets/img/directory/MITGDC_HaiNing.jpg",
 			"name":"Hai Ning",
 			"career":"I obtained my Ph.D. degree in Information Technology from the Civil and Environment Engineering Department at Massachusetts Institute of Technology. Working in the Intelligence Engineering and Science Lab, My research area focuses on e-education, knowledge management, distributed computing, grid computing and integration for large scale enterprise systems.<br><br>Intelligent Engineering Group"
@@ -163,8 +166,8 @@ var directory_data = {
 			"img":"assets/img/directory/MITGDC_ThorstenStaake.jpg",
 			"name":"Thorsten Staake",
 			"career":"Thorsten Staake studied electrical engineering and information technology. He received a M.Sc. from Worcester Polytechnic Institute (WPI), Massachusetts, USA in 2002 and an engineering diploma (Dipl.-Ing.) from Darmstadt Institute of Technology (TUD), Germany in 2004. During his studies, he worked as in several companies such as Infineon and Clariant, and founded a start-up offering IT services for medium sized companies. Since 2004, he is a PhD candidate at the Institute of Technology Management, University of St.Gallen (ITEM-HSG) in Switzerland and a senior researcher at the Auto-ID Lab St.Gallen/Zurich, where he is responsible for the Anti-Counterfeiting Special Interest Group.<br><br>Internet of Things Group"
-		},
-	{
+		}],
+	directory_5:[{
 			"img":"assets/img/directory/MITGDC_Ching-HueiTsou.jpg",
 			"name":"Ching-Huei Tsou",
 			"career":"Ching-Huei is a Research Scientist at the Intelligent Engineering Systems Laboratory group at the Massachusetts Institute of Technology. He holds PhD in Information Technology from MIT, as well as a Master of Science in Structural Engineering and a Bachelor of Science in Civil Engineering from National Taiwan University. He is a member of the MIT Intelligent Engineering Systems Laboratory.<br><br>Ching-Huei’s research focuses on analysis and development of algorithms and applications for solving large scale inference problems. He also enjoys developing web based systems addressing real-world problems.<br><br>Internet of Things Group; Intelligent Engineering Group; Software Architecture Group"
@@ -203,10 +206,11 @@ var directory_data = {
 			"img":"assets/img/directory/MITGDC_Alberto_Garcia.jpg",
 			"name":"Alberto Garcia Robledo",
 			"career":"Alberto Garcia Robledo is a Mexican computer science PhD student at the Information Technology Lab of the Center for Research and Advanced Studies (Cinvestav-Tamaulipas) in Mexico. His PhD thesis is related to the design of a high-performance computing strategy for the processing of complex networks on hybrid multi/many-core parallel architectures. He received his BA in computer system engineering at the Higher Technological Institute of Poza Rica (Mexico, 2008) and his MSc in computer science at Cinvestav-Tamaulipas (Mexico, 2010).<br><br>Alberto Garcia Robledo has visited, attended courses, participated in projects, or performed presentations in renowned Mexican and international academic institutions, such as the Monterrey Institute of Technology and Higher Education (Mexico, 2006), the National Laboratory of Advanced Informatics (Mexico, 2008), Cinvestav-Tamaulipas (Mexico, 2011), the University of La Laguna (Spain, 2011), and the University of Informatics Sciences (Cuba, 2012). Currently, he is participating in a financial fraud detection Accenture/MIT Alliance project at the Geospatial Data Center (GDC) of the Massachusetts Institute of Technology.<br><br>His research interests include: bioinformatics algorithms, complex network applications, parallel and high-performance computing, and data analytics."
-		}, 
-		{
+		}
+		],
+	directory_6:[{
 		"img":"assets/img/directory/MITGDC_Ivan_Ruiz.png",
 			"name":"Ivan Ruiz Salazar",
 			"career":"Ivan Ruiz Salazar is a research assistant of Geospatial Data Center at MIT. He is a Ph.D. student in Computer Science at Computer Research Center (CIC-IPN), Mexico. He currently works in the Data Center Infrastructure Simulator, focusing his research in a simulator for network behavioral analysis, in order to quick-response and decision-making in a large-scale data infrastructure.<br><br>On the other hand, he loves programming and teaching. He has giving lectures around Mexico about using data from social networks, developing mobile apps and web technologies.<br><br>His research interests include Human-Computer Interaction, Data Visualization, Visual Analytics, Semantics, Geographic Information Retrieval, Geographical Analysis, Machine Learning, and Big Data."
-	}
-]};
+	}]
+};

@@ -9,12 +9,12 @@ var footer_data = {
          "link":"directory.html",
       },
 	{
-		"title": "Leadership",
-		"link":"leadership.html"
+		"title": "Directors",
+		"link":"directors.html"
 	},
 	{
-		"title":"Team",
-		"link": "team.html"
+		"title":"Leadership",
+		"link": "leadership.html"
 	},
 	{
 "title":"Papers",

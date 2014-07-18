@@ -13,40 +13,17 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/bxslider/jquery.bxslider.css">        
-
-    <!-- CSS Theme -->    
-    <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/plugins/zrssfeed/jquery.zrssfeed.css" >
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-	<style type="text/css">
-		/* Bootstrap Overwrite */
-		.col-md-5 {
-width: 70%;
-}
-		
-	</style>
+	<style type="text/css">body {display:none;}</style>
+	<script src="assets/plugins/head.load.min.js" data-headjs-load="assets/js/init.js"></script>
 </head> 
 
 <body>
-<!--=== Style Switcher ===-->    
-<!--/style-switcher-->
-<!--=== End Style Switcher ===-->    
 
 <div class="wrapper">
     <!--=== Header ===-->    
-    <div class="header">   
+<div class="header">   
         <!-- Navbar -->
-	<script id="nav-template" type="text/x-handlebars-template">
+<script id="nav-template" type="text/x-handlebars-template">
         <div class="navbar navbar-default" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,12 +36,15 @@ width: 70%;
                         <img id="logo-header" src="assets/img/logo1-default.png" alt="Logo">
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse navbar-responsive-collapse">
+     <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-			<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">{{ title }}</a>
+						{{#equal title "Leadership" }}
+						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
+						{{else}}
+						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
+						{{/equal}}
                 <ul class="dropdown-menu">
                     {{#each subnav}}
                        <li><a href="{{ link }}">{{ title }}</a></li>
@@ -72,80 +52,72 @@ width: 70%;
                 </ul>
 			</li>
 			{{else}}
+			{{#equal title "Leadership" }}
+			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
+			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
+			{{/equal}}
             {{/if}}
         {{/each}}
-    </ul>
-                </div><!--/navbar-collapse-->
+    	</ul>
+	</div><!--/navbar-collapse-->
             </div>    
-        </div>     
-			</script>
-<div id="nav"></div>
+        </div>      
+	</script>
+	<div id="nav"></div>
         <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->   
     <!--=== End Header ===-->    
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
             <h1 class="pull-left">Leadership</h1>
-<h5 class="pull-right" id="leadership_text">“The MIT Geospatial Data Center is dedicated to Large Scale Simulation, Cyber Physical Security, Big Data, and Holistic System Data Visualization”</h5>
-        </div><!--/container-->
+        </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    <div class="container content"> 
+    <div class="container content">		
+    	<div class="row">            
+            <div class="col-md-9">
+    			<!-- General Questions -->
+                <div class="headline"><h2>Meet our leaders:</h2></div>
+                <div class="panel-group acc-v1 margin-bottom-40" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <ul>
+								<li><a href="leadership.html">Directors</a></li>
+                                <li><a href="ab_geospatialtech.html">Advisory Board - Geospatial Technology</a></li>
+                                <li><a href="ab_geocodedmedia.html">Advisory Board - Geocoded Media</a></li>
+                                <li><a href="ab_geocentric.html">Advisory Board - Geocentric Cyber Security</a></li>
+                                <li><a href="ab_geolocated_supplychain.html">Advisory Board - Geolocated Supply Chain</a></li>
+                                <li><a href="leadership_joseph.html">Leadership - Professor Joseph Ferreira</a></li>
+                                <li><a href="leadership_olivier.html">Leadership - Professor Olivier de Weck</a></li>
+								<li><a href="leadership_sanjay.html">Leadership - Professor Sanjay E. Sarma</a></li>
+                            </ul>
+                            </h4>
+                        </div>
+                       </div>	
+                </div><!--/acc-v1-->
 
-		<script id="leadership_template" type="text/x-handlebars-template">			
-	{{#each leader}}	
-	<div class="row portfolio-item margin-bottom-50"> 
-		{{#if left}}
-         <img src="{{img_src}}" alt="{{name}}" style="float:left"/>
-		{{else}}
-			<img src="{{img_src}}" alt="{{name}}" /> 
-		{{/if}}
-  		<div class="col-md-5">
-            	<h2><strong>{{name}}</strong></h2>
-				<td><p>{{{career}}}</p></td>
-				<p>
-					{{#if reference}}
-						{{#each reference}}
-<a href={{link}} rel="tooltip" title="{{title}}" target="_blank"><img class="social_icon" title="{{title}}" alt="{{title}}" 			src="{{img_src}}"></a>
-					    {{/each}}
-					{{/if}}
-				</p>		
-		</div>
-            <!-- End Content Info -->        
-    </div><!--/row-->
-				{{#if left}}
-        		<div class="tag-box tag-box-v2-right">
-				<p>{{highlight}}</p>
-        		</div>
-				{{else}}
-			 	<div class="tag-box tag-box-v2">
-				<p>{{highlight}}</p>
-        		</div>
-				{{/if}}
-	{{/each}}
-		</script>
-		<div id="leadership"></div>
-				
-    </div><!--/container-->	 	
+                <!-- End Other Questions -->
+    		</div><!--/col-md-9-->
+        		
+        </div><!--/row-->
+    </div><!--/container-->		
     <!--=== End Content Part ===-->
 
-        <!--=== Footer ===-->
+    <!--=== Footer ===-->
     <div class="footer">
         <div class="container">
             <div class="row">               
                 <div class="col-md-4 md-margin-bottom-40">
-                    <!-- Recent Blogs -->
                     <div class="posts">
                         <div class="headline"><h2>Recent Blog Posts</h2></div>
 						<div id="testi"></div>
-                       </div>
-                    <!-- End Recent Blogs -->                    
+                       </div>                 
                 </div><!--/col-md-4-->
                 <div class="col-md-4">
                     <!-- Contact Us -->
@@ -182,8 +154,8 @@ width: 70%;
     </div><!--/footer-->
     <!--=== End Footer ===-->
 
-<!--=== Copyright ===-->
-    <div class="copyright">
+    <!--=== Copyright ===-->
+       <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="site-map">
@@ -206,22 +178,10 @@ width: 70%;
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->           
-<script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/plugins/handlebars-v1.3.0.js"></script>
-<script type="text/javascript" src="assets/temps/nav.js"></script>
-<script type="text/javascript" src="assets/temps/footer.js"></script>
-<script type="text/javascript" src="assets/temps/leadership.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>           
-<script type="text/javascript" src="assets/plugins/bxslider/jquery.bxslider.js"></script>
-<script type="text/javascript" src="assets/plugins/zrssfeed/jquery.zrssfeed.js"></script>
-<!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript">
+head.ready(function () {		
     $(document).ready(function() {
+		$("body").fadeIn(1000);	
       	App.init();
 		$("#submit_btn").click(function(){
 				var output = "";
@@ -274,7 +234,7 @@ width: 70%;
         $("#result").slideUp();
     });    
 		
-	$('#testi').rssfeed('http://geospatial.mit.edu:8080/rss',{limit:3,header:false},function(e){
+		$('#testi').rssfeed('http://geospatial.mit.edu:8080/rss',{limit:3,header:false},function(e){
 		
 		$('h4 a',e).each(function(i) {
 
@@ -284,47 +244,28 @@ width: 70%;
 			var url = $(this).attr("href");
 			var post = "http://geospatial.mit.edu:8080/" + url.substring(url.lastIndexOf('/',url.length-2)+1);	//,url.length-1	
 			 $(this).attr("href",post);
+		});
+				
 	});
-		
-	});
-		
-		
-	Handlebars.registerHelper("evenodd", function(array, even, odd, fn, elseFn) {
-  if (array && array.length > 0) {
-    var buffer = "";
-    for (var i = 0, j = array.length; i < j; i++) {
-      var item = array[i];
- 
-      // we'll just put the appropriate stripe class name onto the item for now
-      item.stripeClass = (i % 2 == 0 ? even : odd);
- 
-      // show the inside of the block
-      buffer += fn(item);
-    }
- 
-    // return the finished buffer
-    return buffer;
-  	}
-			else {
-    	return elseFn();
+
+		Handlebars.registerHelper('equal', function(key, value, options) {
+  		if(key == value) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
   		}
-			});
-		
-		
+		});		
 		
 		var nav = $("#nav-template");
 		var template = Handlebars.compile(nav.html());
-		$('#nav').html(template(nav_data));
+		$('#nav').html(template(nav_data));		
 		
 		var sitemap = $("#sitemap-template");
 		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
 		
-		var leader = $("#leadership_template");
-		var template = Handlebars.compile(leader.html());
-		$('#leadership').html(template(leadership_data));
-
  });
+})	
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>

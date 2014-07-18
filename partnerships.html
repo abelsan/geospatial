@@ -13,20 +13,9 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-    <!-- CSS Theme -->    
-    <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/plugins/zrssfeed/jquery.zrssfeed.css" >
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+	<style type="text/css">body {display:none;}</style>
+	<script src="assets/plugins/head.load.min.js" data-headjs-load="assets/js/init.js"></script>
+	
 </head> 
 
 <body>
@@ -187,22 +176,10 @@
     </div><!--/copyright--> <!--/copyright--> 
     <!--=== End Copyright ===-->
 </div>
-
-<!-- JS Global Compulsory -->           
-<script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/plugins/handlebars-v1.3.0.js"></script>
-<script type="text/javascript" src="assets/temps/nav.js"></script>
-<script type="text/javascript" src="assets/temps/partnerships.js"></script>
-<script type="text/javascript" src="assets/temps/footer.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-<!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/zrssfeed/jquery.zrssfeed.js"></script>
-<!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript">
+head.ready(function () {	
     $(document).ready(function() {
+		$("body").fadeIn(1000);	
       	App.init();
 		$("#submit_btn").click(function(){
 				var output = "";
@@ -290,6 +267,7 @@
 		$('#sitemap').html(template(footer_data));
 		
  });
+});
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>

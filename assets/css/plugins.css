@@ -87,25 +87,25 @@
    margin-bottom: 0 !important;    
 }
 .clients li {
-	text-align:center;
+   text-align:center;
    float: left;
    overflow: hidden;
    margin-left: 0px;
    position: relative;
    background: transparent;
 }
-.clients li:hover {
+/*.clients li:hover {
    background:  transparent;
-}
+}*/
 .clients li img.color-img {
    top: 0;
    left: 25%;
    display: none;
    position: absolute;
 }
-.clients li:hover img.color-img { 
+/*.clients li:hover img.color-img { 
    display: block;
-}
+}*/
 .clients li img {
    filter: gray; /* IE6-9 */
    float: none !important;

@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Geospatial Data Center - Papers</title>
+    <title>Geospatial Data Center - Leadership</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -15,7 +15,13 @@
     <link rel="shortcut icon" href="favicon.ico">
 	<style type="text/css">body {display:none;}</style>
 	<script src="assets/plugins/head.load.min.js" data-headjs-load="assets/js/init.js"></script>
-	
+	<style type="text/css">
+		/* Bootstrap Overwrite */
+		.col-md-5 {
+width: 70%;
+}
+		
+	</style>
 </head> 
 
 <body>
@@ -25,7 +31,7 @@
 
 <div class="wrapper">
     <!--=== Header ===-->    
-<div class="header">   
+    <div class="header">   
         <!-- Navbar -->
 	<script id="nav-template" type="text/x-handlebars-template">
         <div class="navbar navbar-default" role="navigation">
@@ -44,7 +50,7 @@
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-						{{#equal title "Papers" }}
+						{{#equal title "Leadership" }}
 						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
 						{{else}}
 						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
@@ -56,7 +62,7 @@
                 </ul>
 			</li>
 			{{else}}
-			{{#equal title "Papers" }}
+			{{#equal title "Leadership" }}
 			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
 			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
@@ -66,59 +72,64 @@
     	</ul>
 	</div><!--/navbar-collapse-->
             </div>    
-        </div>          
-		</script>
-	<div id="nav"></div>
+        </div>     
+			</script>
+<div id="nav"></div>
         <!-- End Navbar -->
     </div>
+    <!--=== End Header ===-->   
     <!--=== End Header ===-->    
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Papers</h1>
-        </div>
+            <h1 class="pull-left">Leadership</h1>
+<h5 class="pull-right" id="leadership_text">“The MIT Geospatial Data Center is dedicated to Large Scale Simulation, Cyber Physical Security, Big Data, and Holistic System Data Visualization”</h5>
+        </div><!--/container-->
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    <div class="container content">		
-    	<div class="row">            
-            <div class="col-md-9">
-    			<!-- Papers -->
-			<script id="papers-template" type="text/x-handlebars-template">
-                <div class="panel-group acc-v1 margin-bottom-40" id="accordion">
-				 {{#each paper_category}}
-				<div class="headline"><h3>{{name}}</h3></div>
-					{{#each papers}}
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-								{{#turn @index}}
-								<a>
-									{{title}}
-                                </a>
-								{{else}}
-								<a style="background:#f5f5f5;" >
-									{{title}}
-                                </a>
-								{{/turn}}
-                            </h4>
-                        </div>
-                       </div>
-					{{/each}}
-					{{/each}}
-                </div><!--/acc-v1-->
-			</script>
-			<div id="papers"></div>
-                <!-- End Other Questions -->
-    		</div><!--/col-md-9-->
-        		
-        </div><!--/row-->
-    </div><!--/container-->		
+    <div class="container content"> 
+
+		<script id="leadership_template" type="text/x-handlebars-template">			
+	{{#each leader}}	
+	<div class="row portfolio-item margin-bottom-50"> 
+		{{#turn @index}}
+         <img src="{{img_src}}" alt="{{name}}" style="float:left"/>
+		{{else}}
+			<img src="{{img_src}}" alt="{{name}}" /> 
+		{{/turn}}
+  		<div class="col-md-5">
+            	<h2><strong>{{name}}</strong></h2>
+				<td><p>{{{career}}}</p></td>
+				<p>
+					{{#if reference}}
+						{{#each reference}}
+<a href={{link}} rel="tooltip" title="{{title}}" target="_blank"><img class="social_icon" title="{{title}}" alt="{{title}}" 			src="{{img_src}}"></a>
+					    {{/each}}
+					{{/if}}
+				</p>		
+		</div>
+            <!-- End Content Info -->        
+    </div><!--/row-->
+				{{#turn @index}}
+        		<div class="tag-box tag-box-v2-right">
+				<p>{{highlight}}</p>
+        		</div>
+				{{else}}
+			 	<div class="tag-box tag-box-v2">
+				<p>{{highlight}}</p>
+        		</div>
+				{{/turn}}
+	{{/each}}
+		</script>
+		<div id="leadership"></div>
+				
+    </div><!--/container-->	 	
     <!--=== End Content Part ===-->
 
-    <!--=== Footer ===-->
+        <!--=== Footer ===-->
     <div class="footer">
         <div class="container">
             <div class="row">               
@@ -165,7 +176,7 @@
     </div><!--/footer-->
     <!--=== End Footer ===-->
 
-    <!--=== Copyright ===-->
+<!--=== Copyright ===-->
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -190,7 +201,7 @@
 
 <!-- JS Global Compulsory -->           
 <script type="text/javascript">
-head.ready(function () {
+head.ready(function () {		
     $(document).ready(function() {
 		$("body").fadeIn(1000);	
       	App.init();
@@ -257,7 +268,6 @@ head.ready(function () {
 			 $(this).attr("href",post);
 	});
 		
-		
 	});
 		
 		Handlebars.registerHelper('turn', function(index, options) {
@@ -266,27 +276,27 @@ head.ready(function () {
 		} else {
 			return options.inverse(this);
   		}
-		});		
-	
+		});
+		
 		Handlebars.registerHelper('equal', function(key, value, options) {
   		if(key == value) {
 			return options.fn(this);
 		} else {
 			return options.inverse(this);
   		}
-		});		
-
+		});
+		
 		var nav = $("#nav-template");
 		var template = Handlebars.compile(nav.html());
 		$('#nav').html(template(nav_data));
 		
-		var papers = $("#papers-template");
-		var template = Handlebars.compile(papers.html());
-		$('#papers').html(template(papers_data));
-		
 		var sitemap = $("#sitemap-template");
 		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
+		
+		var leader = $("#leadership_template");
+		var template = Handlebars.compile(leader.html());
+		$('#leadership').html(template(leadership_data));
 
  });
 })	

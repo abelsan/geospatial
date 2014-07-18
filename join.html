@@ -13,21 +13,8 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-    <!-- CSS Theme -->    
-    <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/plugins/zrssfeed/jquery.zrssfeed.css" >
-
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+	<style type="text/css">body {display:none;}</style>
+	<script src="assets/plugins/head.load.min.js" data-headjs-load="assets/js/init.js"></script>
 </head> 
 
 <body>
@@ -187,7 +174,9 @@ Research labs and centers do not directly admit undergraduate students. To parti
 <!-- JS Page Level -->           
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript">
+head.ready(function () {		
     $(document).ready(function() {
+		$("body").fadeIn(1000);	
       	App.init();
 		$("#submit_btn").click(function(){
 				var output = "";
@@ -263,6 +252,7 @@ Research labs and centers do not directly admit undergraduate students. To parti
 		$('#sitemap').html(template(footer_data));
 		
  });
+})
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
