@@ -654,12 +654,12 @@ float: left;
     margin: 0 -13%;
 }
 
-/* The author credit area after the post */
+/* The author credit area after the post
+border-top: #EBF2F6 1px solid; --> */
 .post-footer {
     position: relative;
-    margin: 4rem 0 0 0;
+    margin: 7rem 0 0 0;
     padding: 4rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
 }
 
 .post-footer h4 {
@@ -719,7 +719,7 @@ float: left;
    links remain at a fixed width the whole time */
 .post-footer .share {
     position: absolute;
-    top: 4rem;
+    top: 1em;
     right: 0;
     width: 140px;
 }
