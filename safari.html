@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Geospatial Data Center - Geocentric</title>
+    <title>Geospatial Data Center - Projects - SAFARI</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -19,7 +18,8 @@
 </head> 
 
 <body>
-<!--=== Style Switcher ===-->    <!--/style-switcher-->
+<!--=== Style Switcher ===-->    
+<!--/style-switcher-->
 <!--=== End Style Switcher ===-->    
 
 <div class="wrapper">
@@ -39,12 +39,11 @@
                         <img id="logo-header" src="assets/img/logo1-default.png" alt="Logo">
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse navbar-responsive-collapse">
-                  <ul class="nav navbar-nav">
+     <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-						{{#equal title "Leadership" }}
+						{{#equal title "Research" }}
 						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
 						{{else}}
 						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
@@ -56,7 +55,7 @@
                 </ul>
 			</li>
 			{{else}}
-			{{#equal title "Leadership" }}
+			{{#equal title "Research" }}
 			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
 			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
@@ -64,79 +63,48 @@
             {{/if}}
         {{/each}}
     	</ul>
-                </div><!--/navbar-collapse-->
+	</div><!--/navbar-collapse-->	
             </div>    
         </div>   
-		</script>
-<div id="nav"></div>
+	</script>
+	<div id="nav"></div>
         <!-- End Navbar -->
     </div>
     <!--=== End Header ===-->   
-    <!--=== End Header ===-->  
+    <!--=== End Header ===-->   
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Advisory Board</h1>
+            <h1 class="pull-left">SAFARI</h1>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
     <div class="container content">		
-    	<div class="row">
-        	<div class="col-md-9">
-            	<div class="headline"><h2>Geocentric Cyber Security</h2></div>
-
-       <script id="geocentric-template" type="text/x-handlebars-template">			
-			{{#each geocentric}}	
-			<div class="row clients-page">
-                    <div class="col-md-2">
-                        <img src="{{img}}" class="img-responsive hover-effect" alt="{{name}}" />
-                    </div>
-                    <div class="col-md-10">
-                        <h4>{{name}}</h4>
-                        <p>{{{career}}}</p>
-					{{#if references}}	
-						{{#each references}}
-						<a href="{{link}}" target="_blank">{{title}}</a>
-						<br>
-						{{/each}}
-					{{/if}}
-                    </div>
-                </div>
-			{{/each}}
-		</script>
-		<div id="geocentric"></div>
-
-
-            </div><!--/col-md-9-->
-
-        	<div class="col-md-3">
-            	<!-- Our Services -->
-
-            </div><!--/col-md-3-->
-        </div><!--/row-->        
+ <!--/row-fluid-->    
     </div><!--/container-->		
     <!--=== End Content Part ===-->
- <!--=== Footer ===-->
+
+       <!--=== Footer ===-->
     <div class="footer">
         <div class="container">
             <div class="row">               
                 <div class="col-md-4 md-margin-bottom-40">
                     <!-- Recent Blogs -->
-                 <div class="posts">
+                    <div class="posts">
                         <div class="headline"><h2>Recent Blog Posts</h2></div>
 						<div id="testi"></div>
-                 </div>
-                    <!-- End Recent Blogs -->                    
+                       </div>
+                    <!-- End Recent Blogs -->                     
                 </div><!--/col-md-4-->
-           <div class="col-md-4">
+                <div class="col-md-4">
                     <!-- Contact Us -->
                     <div class="headline"><h2>Contact Us</h2></div> 
 					<br>
 					<div id="result"></div>
- <form id="contact_form" >
+ <form id="contact_form">
                     <label>Name</label>
                     <div class="row margin-bottom-20">
                         <div class="col-md-7 col-md-offset-0">
@@ -167,7 +135,7 @@
     <!--=== End Footer ===-->
 
     <!--=== Copyright ===-->
-    <div class="copyright">
+        <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="site-map">
@@ -187,8 +155,7 @@
         </div> 
     </div><!--/copyright--> <!--/copyright--> 
     <!--=== End Copyright ===-->
-    <!--=== End Copyright ===-->
-</div><!--/wrapper-->
+</div>
 
 <!-- JS Global Compulsory -->           
 <script type="text/javascript">
@@ -257,8 +224,8 @@ head.ready(function () {
 			var url = $(this).attr("href");
 			var post = "http://geospatial.mit.edu:8080/" + url.substring(url.lastIndexOf('/',url.length-2)+1);	//,url.length-1	
 			 $(this).attr("href",post);
-	});
-		
+		});
+					
 	});
 		
 		Handlebars.registerHelper('equal', function(key, value, options) {
@@ -267,24 +234,22 @@ head.ready(function () {
 		} else {
 			return options.inverse(this);
   		}
-		});				
-		
-		var template;
+		});
 		
 		var nav = $("#nav-template");
-		template = Handlebars.compile(nav.html());
+		var template = Handlebars.compile(nav.html());
 		$('#nav').html(template(nav_data));
 		
 		var sitemap = $("#sitemap-template");
-	 	template = Handlebars.compile(sitemap.html());
+		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
 		
-		var geocentric = $("#geocentric-template");
-		template = Handlebars.compile(geocentric.html());
-		$('#geocentric').html(template(advisors_data));
+		var courses = $("#teaching-template");
+		var template = Handlebars.compile(courses.html());
+		$('#courses').html(template(teaching_data));
 
  });
-})	
+})
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>

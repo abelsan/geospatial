@@ -54,4 +54,34 @@ var nav_data = {
 "link":"blog",
 	}
    ]
-};
+};   
+/*
+Home
+About 
+	- mission/vision ***revisar old wordpress
+	 (Abel)	
+	- Directory
+	- Leadership
+Research
+	- projects ******
+		> descripcion de proyecto con foto 
+	- papers
+	- Awards
+		> paragraph			
+		> Static/blog
+			> press
+			> videos
+			> description
+	- software???
+		(10max, ~5)	
+Courses
+	- Online 
+	- Summer courses
+	- Fall/Winter courses
+Talks 
+	- Video
+	- audio
+Blog
+	- guests
+	- lab members
+*/

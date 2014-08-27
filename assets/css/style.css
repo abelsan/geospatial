@@ -16,9 +16,74 @@
 
 /*Boxed Layout
 ------------------------------------*/
+.overlay-zoom {
+	width: 20% !important;
+	height: 20% !important;
+}
+
+.col-md-33 {
+	width:33%;
+}
+
+ .risk-ranking + p {
+	width: 22em;
+}
+
+ .rssRow {
+margin: 0% 0% 2% 0% !important;
+padding: 0 !important;
+}
+
+h2.image-home {
+background: url(../img/home_32.png) no-repeat left center;
+padding: 10px 0px 0px 40px;
+height: 50px;
+
+}
+
+@media (max-width: 992px) {
+	.col-md-4 {
+		width: 100%;
+	}
+}
+
 .slides li:first-child {
 	width: 250px !important;
 	margin-right: -2.5em;
+}
+
+.clients-page {
+margin-top: 10px;
+margin-bottom: 50px;
+padding-bottom: 30px;
+border-bottom: solid 1px #eee;
+}
+
+#leadership div:first-child {
+margin-left: 2%;
+}
+
+
+.col-md-5 {
+width: 66.666667% !important;
+margin-left: 2% !important;
+}
+
+
+.col-md-2 {
+margin-top: 1%;
+}
+
+
+.breadcrumb>li+li:before {
+	content:"\007C";
+	color: #BBB !important;
+}
+
+#myCarousel {
+width: 940px;
+margin: auto;
+margin-top: 6%;
 }
 
 .col-md-4 {
@@ -1031,6 +1096,7 @@ z-index: 1;
 } 
 .footer p {
 	color: #333;
+	/*font-family: "Comic Sans MS", cursive, sans-serif;*/
 } 
 
 .footer a {
@@ -2509,3 +2575,16 @@ color:#276BB0;
 margin-top: 0px !important;
 }
 
+.container_12, .container_16 {
+margin-left: auto;
+margin-right: auto;
+width: 960px;
+}
+
+.container_12 .grid_4 {
+width: 300px;
+	display: inline;
+float: left;
+margin-left: 10px;
+margin-right: 10px;
+}

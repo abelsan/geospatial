@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Geospatial Data Center - Projects - SAFARI</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+	<style type="text/css">body {display:none;}</style>
+	<script src="../../assets/plugins/head.load.min.js" data-headjs-load="../../assets/js/init_1.js"></script>
+</head> 
+
+<body>
+<!--=== Style Switcher ===-->    
+<!--/style-switcher-->
+<!--=== End Style Switcher ===-->    
+
+<div class="wrapper">
+    <!--=== Header ===-->    
+    <div class="header">   
+        <!-- Navbar -->
+	<script id="nav-template" type="text/x-handlebars-template">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img id="logo-header" src="../../assets/img/logo1-default.png" alt="Logo">
+                    </a>
+                </div>
+     <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+        {{#each navigation}}
+            {{#if subnav}}
+						{{#equal title "Research" }}
+						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
+						{{else}}
+						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
+						{{/equal}}
+                <ul class="dropdown-menu">
+                    {{#each subnav}}
+                       <li><a href="{{ link }}">{{ title }}</a></li>
+                    {{/each}}
+                </ul>
+			</li>
+			{{else}}
+			{{#equal title "Research" }}
+			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
+			{{else}}
+			<li><a href="{{ link }}">{{ title }}</a></li>
+			{{/equal}}
+            {{/if}}
+        {{/each}}
+    	</ul>
+	</div><!--/navbar-collapse-->	
+            </div>    
+        </div>   
+	</script>
+	<div id="nav"></div>
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===-->   
+    <!--=== End Header ===-->   
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">SAFARI</h1>
+			<ul class="pull-right breadcrumb"><li><a style="color:#225E9B;">SAFARI</a></li><li><a>MIT Global Infrastructure Simulator</a></li><li><a>Particle Hydrodynamics Simulator</a></li></ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <!--=== Content Part ===-->
+    <div class="container content">
+			<br>
+		<div  style="margin: 0% 0% 1% 5%;color: #555;" style="margin-top: 1%;">
+			<img src="../../assets/img/safari_logo.png" alt="SAFARI" height="100"/>
+			<div class="servive-block servive-block-default servive-shadow pull-right" style="margin: 0% 6% 4% 6%;
+width: 36em;
+color: #555;">
+		<h4 style="font-size:14px" ><b>SAFARI</b> is a Situational Awareness framework that exploits different perspectives of the same financial data and assigns risk scores to entities (e.g. payment documents) to improve false positive ratios and assist the identification of fraudulent activity in huge and unlabeled financial data.</h4>
+        </div>
+			</div>
+	  <!-- About Sldier -->
+        <div class="shadow-wrapper margin-bottom-50">
+            <div class="carousel slide carousel-v1 box-shadow shadow-effect-2" id="myCarousel">
+                <ol class="carousel-indicators">
+                    <li class="rounded-x active" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li class="rounded-x" data-target="#myCarousel" data-slide-to="1"></li>
+                    <li class="rounded-x" data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src="../../assets/img/sliders/office1.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="../../assets/img/sliders/fern.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="../../assets/img/sliders/trees.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>            
+        </div>
+		  <div class="container_12">
+    <div class="grid_4">
+      <h2  class="image-home">Evidence Integration</h2>
+      <p>A novel Red Flag Network (RFNet) link analysis approach allows SAFARI to integrate the data generated by a variety of anomaly detectors. An RFNet is a network of entities (e.g. payment documents) where entities are connected if they participate in automatically raised red flags.</p>
+    </div>		    <div class="grid_4">
+      <h2 class="image-home">Extensible platform</h2>
+      <p>The SAFARI software platform can be upgraded and extended to take advantage of new advances and add more capabilities in data and visual analytics for fraud detection. Being a flexible software framework, SAFARI can keep up with business evolution and dynamics, having the potential to be a valuable advisor in decision-making in both the short and the long-term.</p>
+    </div>
+	<div class="grid_4">
+      <h2 class="image-home">Visual Analytics</h2>
+      <p>SAFARI's treemaps, RFNet and map data visualizations are enablers that provide insights into the related entities being inspected and unveil relationships that are hard to be discovered otherwise. The objective is to help SMEs in perceiving patterns, gain insights into the data and make sense of disparate but potentially related phenomena.</p>
+    </div>
+    <div class="grid_4">
+      <h2 class="image-home risk-ranking">Risk ranking</h2>
+      <p> 
+		  Fraud schemes arise when the red flags in RFNets are related and the case is solved when the loose ends are tied up. To relate red flags, SAFARI implements a Bayesian Belief Network (BBN) apporach for advanced evidence fusion and risk ranking. A BBN is a probabilistic graphical model that allows SAFARI to deal with fraud occurrence uncertainly by representing causal relationships among financial red flags to which observed occurrence is posted as evidence.</p>
+    </div>
+			  		<span style="padding: 1em 0em 0em 1em;">
+						<br>
+						<iframe src="http://player.vimeo.com/video/99587394" width="600" height="381" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top: 2%;"></iframe></span>
+			  <br><br><br>
+			  <div class="shadow-wrapper">
+            <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+			  <p>SAFARI takes an effective data-driven approach for fraud detection on millions of unlabeled payment registers that incorporates different views of available data. To achieve this, SAFARI introduces the concept of situational awareness (SA), conceived as the “information gathered from a variety of sources that, when communicated to emergency managers and decision makers, can form the basis for incident management decision making”.</p>
+            </div>
+        </div>
+			  <br>
+			  <span class="pull-left"><iframe src="http://player.vimeo.com/video/101656276" width="600" height="381" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></span>
+			  <div class="pull-right col-md-33" >   
+			  <div class="headline"><h3>Screenshots</h3></div>				  
+				  
+<ul class="list-unstyled blog-photos margin-bottom-30">             
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 1" href="../../assets/img/screenshots/safari_screenshot_00.png"><img src="../../assets/img/screenshots/safari_screenshot_00.png" alt="" class="hover-effect img-responsive"></a></li>	
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 2" href="../../assets/img/screenshots/safari_screenshot_01.png"><img src="../../assets/img/screenshots/safari_screenshot_01.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 3" href="../../assets/img/screenshots/safari_screenshot_02.png"><img src="../../assets/img/screenshots/safari_screenshot_02.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 4" href="../../assets/img/screenshots/safari_screenshot_03.png"><img src="../../assets/img/screenshots/safari_screenshot_03.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 5" href="../../assets/img/screenshots/safari_screenshot_04.png"><img src="../../assets/img/screenshots/safari_screenshot_04.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 6" href="../../assets/img/screenshots/safari_screenshot_05.png"><img src="../../assets/img/screenshots/safari_screenshot_05.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 7" href="../../assets/img/screenshots/safari_screenshot_06.png"><img src="../../assets/img/screenshots/safari_screenshot_06.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 8" href="../../assets/img/screenshots/safari_screenshot_07.png"><img src="../../assets/img/screenshots/safari_screenshot_07.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 9" href="../../assets/img/screenshots/safari_screenshot_08.png"><img src="../../assets/img/screenshots/safari_screenshot_08.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 10" href="../../assets/img/screenshots/safari_screenshot_09.png"><img src="../../assets/img/screenshots/safari_screenshot_09.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 11" href="../../assets/img/screenshots/safari_screenshot_10.png"><img src="../../assets/img/screenshots/safari_screenshot_10.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 12" href="../../assets/img/screenshots/safari_screenshot_11.png"><img src="../../assets/img/screenshots/safari_screenshot_11.png" alt="" class="hover-effect img-responsive"></a></li>				
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 13" href="../../assets/img/screenshots/safari_screenshot_12.png"><img src="../../assets/img/screenshots/safari_screenshot_12.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 14" href="../../assets/img/screenshots/safari_screenshot_13.png"><img src="../../assets/img/screenshots/safari_screenshot_13.png" alt="" class="hover-effect img-responsive"></a></li>
+<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 15" href="../../assets/img/screenshots/safari_screenshot_14.png"><img src="../../assets/img/screenshots/safari_screenshot_14.png" alt="" class="hover-effect img-responsive"></a></li>
+
+                </ul><!--/blog-photos-->     
+				  <br>
+				  		  <div class="headline"><h3>Documents</h3></div>
+			  </div>
+			  <br>
+  </div>
+
+		
+        <!-- End About Sldier -->
+ <!--/row-fluid-->    
+    </div><!--/container-->		
+    <!--=== End Content Part ===-->
+
+       <!--=== Footer ===-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">               
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- Recent Blogs -->
+                    <div class="posts">
+                        <div class="headline"><h2>Recent Blog Posts</h2></div>
+						<div id="testi"></div>
+                       </div>
+                    <!-- End Recent Blogs -->                     
+                </div><!--/col-md-4-->
+                <div class="col-md-4">
+                    <!-- Contact Us -->
+                    <div class="headline"><h2>Contact Us</h2></div> 
+					<br>
+					<div id="result"></div>
+ <form id="contact_form">
+                    <label>Name</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-7 col-md-offset-0">
+                            <input type="text" class="form-control" id="contact_name">
+                        </div>                
+                    </div>
+                    
+                    <label>Email</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-7 col-md-offset-0">
+                            <input type="text" class="form-control" id="contact_email">
+                        </div>                
+                    </div>
+                    
+                    <label>Message</label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-11 col-md-offset-0">
+                            <textarea rows="8" class="form-control" id="contact_message"></textarea>
+                        </div>                
+                    </div>
+                    
+                    <p><button type="button" class="btn-u" id="submit_btn">Send Message</button></p>
+                </form>
+                </div><!--/col-md-4-->
+            </div>
+        </div> 
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+        <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="site-map">
+                    <script id="sitemap-template" type="text/x-handlebars-template">
+							<ul>
+							{{#each site_map}}
+								<li><a href="{{link}}">{{title}}</a>&nbsp;|&nbsp; </li>
+							{{/each}}
+						</ul>
+					</script>
+					<div id="sitemap"></div>
+                </div>
+				  <a href="index.html">
+                        <img class="pull-right" id="logo-footer" src="assets/img/mit-greywhite-footer3.gif" alt="">
+                    </a>
+            </div>
+        </div> 
+    </div><!--/copyright--> <!--/copyright--> 
+    <!--=== End Copyright ===-->
+</div>
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript">
+head.ready(function () {		
+    $(document).ready(function() {
+		$("body").fadeIn(1000);	
+      	App.init();
+	    App.initFancybox();     
+		
+		$("#submit_btn").click(function(){
+				var output = "";
+				var name = $("#contact_name").val();
+				var email = $("#contact_email").val();	
+				var message = $("#contact_message").val();
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			
+				var iscorrect = true;
+				
+				if (name == "" || name==null ){
+					$("#contact_name").addClass("entry_error");
+					iscorrect = false;	
+				}
+				if (email == "" || email == null || !filter.test(email)){
+					$("#contact_email").addClass("entry_error");
+					iscorrect = false;	
+				}
+				if (message == "" || message == null ){
+					$("#contact_message").addClass("entry_error");
+					iscorrect = false;	
+				}
+			
+				if(iscorrect) {
+					var post_data = {'name':name,'email':email,'message':message};
+					
+					$.post("contacto.php",post_data,function(response){
+						if (response.type == "error"){
+							output = '<div class="error">' + response.text  + '</div>';
+						} else {
+							output = '<div class="success">' + response.text  + '</div>';
+							$("#contact_form input").val("");
+							$("#contact_form textarea").val("");
+						}
+						
+						$("#result").hide().html(output).slideDown();
+						
+					},'json');
+					
+				}
+
+	 });		
+			
+    $("#contact_form input").keyup(function() { 
+        $("#contact_form input").removeClass('entry_error'); 
+        $("#result").slideUp();
+    });
+	$("#contact_form textarea").keyup(function() { 
+        $("#contact_form textarea").removeClass('entry_error'); 
+        $("#result").slideUp();
+    });    
+		
+		$('#testi').rssfeed('http://geospatial.mit.edu:8080/rss',{limit:3,header:false},function(e){
+		
+		$('h4 a',e).each(function(i) {
+
+			var title = $(this).text();
+			if (title.length > 14) $(this).text(title.substring(0,60)+'...');
+			
+			var url = $(this).attr("href");
+			var post = "http://geospatial.mit.edu:8080/" + url.substring(url.lastIndexOf('/',url.length-2)+1);	//,url.length-1	
+			 $(this).attr("href",post);
+		});
+					
+	});
+		
+		Handlebars.registerHelper('equal', function(key, value, options) {
+  		if(key == value) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+  		}
+		});
+		
+		var nav = $("#nav-template");
+		var template = Handlebars.compile(nav.html());
+		$('#nav').html(template(nav_data));
+		
+		var sitemap = $("#sitemap-template");
+		var template = Handlebars.compile(sitemap.html());
+		$('#sitemap').html(template(footer_data));
+		
+		var courses = $("#teaching-template");
+		var template = Handlebars.compile(courses.html());
+		$('#courses').html(template(teaching_data));
+
+ });
+})
+</script>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+<![endif]-->
+
+</body>
+</html> 

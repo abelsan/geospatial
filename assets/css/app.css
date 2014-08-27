@@ -1637,6 +1637,10 @@ i.icon-bg-light-grey {
   box-shadow: 0 0 8px #eee;
 }
 
+.servive-shadow {
+	box-shadow: 0 0 8px #eee;
+}
+
 .servive-block-light p,
 .servive-block-light h2,
 .servive-block-default p,
