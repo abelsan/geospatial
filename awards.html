@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Geospatial Data Center - Leadership</title>
+    <title>Geospatial Data Center - Awards</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,16 +12,9 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 	<style type="text/css">body {display:none;}</style>
 	<script src="assets/plugins/head.load.min.js" data-headjs-load="assets/js/init.js"></script>
-	<style type="text/css">
-		/* Bootstrap Overwrite */
-		.col-md-5 {
-width: 70%;
-}
-		
-	</style>
 </head> 
 
 <body>
@@ -31,7 +24,7 @@ width: 70%;
 
 <div class="wrapper">
     <!--=== Header ===-->    
-    <div class="header">   
+<div class="header">   
         <!-- Navbar -->
 	<script id="nav-template" type="text/x-handlebars-template">
         <div class="navbar navbar-default" role="navigation">
@@ -50,7 +43,7 @@ width: 70%;
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-						{{#equal title "About" }}
+						{{#equal title "Research" }}
 						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
 						{{else}}
 						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
@@ -62,7 +55,7 @@ width: 70%;
                 </ul>
 			</li>
 			{{else}}
-			{{#equal title "About" }}
+			{{#equal title "Research" }}
 			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
 			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
@@ -72,26 +65,24 @@ width: 70%;
     	</ul>
 	</div><!--/navbar-collapse-->
             </div>    
-        </div>     
-			</script>
-<div id="nav"></div>
+        </div>          
+		</script>
+	<div id="nav"></div>
         <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->   
     <!--=== End Header ===-->    
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Leadership</h1>
-<!--<h5 class="pull-right" id="leadership_text">“The MIT Geospatial Data Center is dedicated to Large Scale Simulation, Cyber Physical Security, Big Data, and Holistic System Data Visualization”</h5>-->
-			   <script id="subnav-template" type="text/x-handlebars-template">
+            <h1 class="pull-left">Research</h1>
+				   <script id="subnav-template" type="text/x-handlebars-template">
 							<ul class="pull-right breadcrumb">
 							   {{#each navigation}}
-								 {{#equal title "About" }}
+								 {{#equal title "Research" }}
 								{{#each subnav}}
 								<li>
-									{{#equal title "Leadership" }}
+									{{#equal title "Awards" }}
 									<a href="{{link}}" style="color:#225E9B;">{{title}}</a>
 									{{else}}
 									<a href="{{link}}">{{title}}</a>
@@ -103,52 +94,36 @@ width: 70%;
 						</ul>
 			</script>
 					<div id="subnav"></div>
-        </div><!--/container-->
+        </div>
     </div><!--/breadcrumbs-->
-	<br>
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    <div class="container content"> 
-
-		<script id="leadership_template" type="text/x-handlebars-template">			
-	{{#each leader}}	
-	<div class="row portfolio-item margin-bottom-50"> 
-		{{#turn @index}}
-         <img src="{{img_src}}" alt="{{name}}" style="float:left"/>
-		{{else}}
-			<img src="{{img_src}}" alt="{{name}}" /> 
-		{{/turn}}
-  		<div class="col-md-5">
-            	<h2><strong>{{name}}</strong></h2>
-				<td><p>{{{career}}}</p></td>
-				<p>
-					{{#if reference}}
-						{{#each reference}}
-<a href={{link}} rel="tooltip" title="{{title}}" target="_blank"><img class="social_icon" title="{{title}}" alt="{{title}}" 			src="{{img_src}}"></a>
-					    {{/each}}
-					{{/if}}
-				</p>		
-		</div>
-            <!-- End Content Info -->        
-    </div><!--/row-->
-				{{#turn @index}}
-        		<div class="tag-box tag-box-v2-right">
-				<p>{{highlight}}</p>
-        		</div>
-				{{else}}
-			 	<div class="tag-box tag-box-v2">
-				<p>{{highlight}}</p>
-        		</div>
-				{{/turn}}
-	{{/each}}
-		</script>
-		<div id="leadership"></div>
-				
-    </div><!--/container-->	 	
+    <div class="container content">
+		
+	<script id="awards_template" type="text/x-handlebars-template">			
+	<div class="gallery-page">
+		 <div class="row margin-bottom-20">
+		{{#each awards}}
+           
+                <div class="col-md-3 col-sm-6">
+					<div class="video_data"><h3 class="videos-page">{{title}}</h3>
+					<p>{{author}}</p></div>
+                        <div class="responsive-video box-shadow shadow-effect-2 border">						
+						<iframe  src="{{url}}" width="100%" frameborder="0" 				webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                </div>	
+			 	{{/each}}
+            </div>
+	
+     </div>
+	</script>
+	<div id="awards"></div>		
+		
+    </div><!--/container-->		
     <!--=== End Content Part ===-->
 
-        <!--=== Footer ===-->
+    <!--=== Footer ===-->
     <div class="footer">
         <div class="container">
             <div class="row">               
@@ -195,7 +170,7 @@ width: 70%;
     </div><!--/footer-->
     <!--=== End Footer ===-->
 
-<!--=== Copyright ===-->
+    <!--=== Copyright ===-->
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -220,7 +195,7 @@ width: 70%;
 
 <!-- JS Global Compulsory -->           
 <script type="text/javascript">
-head.ready(function () {		
+head.ready(function () {	
     $(document).ready(function() {
 		$("body").fadeIn(1000);	
       	App.init();
@@ -287,15 +262,8 @@ head.ready(function () {
 			 $(this).attr("href",post);
 	});
 		
-	});
 		
-		Handlebars.registerHelper('turn', function(index, options) {
-  		if(index%2 == 0) {
-			return options.fn(this);
-		} else {
-			return options.inverse(this);
-  		}
-		});
+	});
 		
 		Handlebars.registerHelper('equal', function(key, value, options) {
   		if(key == value) {
@@ -308,20 +276,20 @@ head.ready(function () {
 		var nav = $("#nav-template");
 		var template = Handlebars.compile(nav.html());
 		$('#nav').html(template(nav_data));
-		
+
 		var sitemap = $("#sitemap-template");
 		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
 		
-		var leader = $("#leadership_template");
-		var template = Handlebars.compile(leader.html());
-		$('#leadership').html(template(leadership_data));
-
-				var subnav = $("#subnav-template");
+		var awards = $("#awards_template");
+		var template = Handlebars.compile(awards.html());
+		$('#awards').html(template(awards_data));
+		
+					var subnav = $("#subnav-template");
 		template = Handlebars.compile(subnav.html());
 		$('#subnav').html(template(nav_data));
  });
-})	
+})
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>

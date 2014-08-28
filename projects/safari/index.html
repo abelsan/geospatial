@@ -50,15 +50,15 @@
 						{{/equal}}
                 <ul class="dropdown-menu">
                     {{#each subnav}}
-                       <li><a href="{{ link }}">{{ title }}</a></li>
+                       <li><a href="../../{{ link }}">{{ title }}</a></li>
                     {{/each}}
                 </ul>
 			</li>
 			{{else}}
 			{{#equal title "Research" }}
-			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
+			<li class="active"><a href="../../{{ link }}">{{ title }}</a></li>
 			{{else}}
-			<li><a href="{{ link }}">{{ title }}</a></li>
+			<li><a href="../../{{ link }}">{{ title }}</a></li>
 			{{/equal}}
             {{/if}}
         {{/each}}
@@ -159,7 +159,7 @@ color: #555;">
 <ul class="list-unstyled blog-photos margin-bottom-30">             
 <li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 1" href="../../assets/img/screenshots/safari_screenshot_00.png"><img src="../../assets/img/screenshots/safari_screenshot_00.png" alt="" class="hover-effect img-responsive"></a></li>	
 <li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 2" href="../../assets/img/screenshots/safari_screenshot_01.png"><img src="../../assets/img/screenshots/safari_screenshot_01.png" alt="" class="hover-effect img-responsive"></a></li>
-<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 3" href="../../assets/img/screenshots/safari_screenshot_02.png"><img src="../../assets/img/screenshots/safari_screenshot_02.png" alt="" class="hover-effect img-responsive"></a></li>
+<!--<li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 3" href="../../assets/img/screenshots/safari_screenshot_02.png"><img src="../../assets/img/screenshots/safari_screenshot_02.png" alt="" class="hover-effect img-responsive"></a></li>-->
 <li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 4" href="../../assets/img/screenshots/safari_screenshot_03.png"><img src="../../assets/img/screenshots/safari_screenshot_03.png" alt="" class="hover-effect img-responsive"></a></li>
 <li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 5" href="../../assets/img/screenshots/safari_screenshot_04.png"><img src="../../assets/img/screenshots/safari_screenshot_04.png" alt="" class="hover-effect img-responsive"></a></li>
 <li class="overlay-zoom"><a class="fancybox-button zoomer" data-rel="fancybox-button" title="Screenshot 6" href="../../assets/img/screenshots/safari_screenshot_05.png"><img src="../../assets/img/screenshots/safari_screenshot_05.png" alt="" class="hover-effect img-responsive"></a></li>
@@ -247,14 +247,14 @@ color: #555;">
                     <script id="sitemap-template" type="text/x-handlebars-template">
 							<ul>
 							{{#each site_map}}
-								<li><a href="{{link}}">{{title}}</a>&nbsp;|&nbsp; </li>
+								<li><a href="../../{{link}}">{{title}}</a>&nbsp;|&nbsp; </li>
 							{{/each}}
 						</ul>
 					</script>
 					<div id="sitemap"></div>
                 </div>
 				  <a href="index.html">
-                        <img class="pull-right" id="logo-footer" src="assets/img/mit-greywhite-footer3.gif" alt="">
+                        <img class="pull-right" id="logo-footer" src="../../assets/img/mit-greywhite-footer3.gif" alt="">
                     </a>
             </div>
         </div> 

@@ -16,6 +16,11 @@
 
 /*Boxed Layout
 ------------------------------------*/
+
+.pagination {
+margin: 0px 0 20px 0 !important
+}
+
 .overlay-zoom {
 	width: 20% !important;
 	height: 20% !important;
@@ -71,17 +76,21 @@ margin-left: 2% !important;
 
 
 .col-md-2 {
-margin-top: 1%;
+/*margin-top: 1%;*/
 }
 
 
 .breadcrumb>li+li:before {
 	content:"\007C";
 	color: #BBB !important;
+	padding: 0 0px !important;
+}
+
+.breadcrumb>li {
 }
 
 #myCarousel {
-width: 940px;
+width: 85%;
 margin: auto;
 margin-top: 6%;
 }

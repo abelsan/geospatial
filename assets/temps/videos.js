@@ -9,11 +9,6 @@ var videos_data = {
 			"title":"Securing the MGHPCC",
 			"author":"By Jim Culbert",
 			"url":"http://player.vimeo.com/video/97254850"
-		},
-		{
-			"title":"Microsoft awards Juan Murillo",
-			"author":"By MIT Geospatial Data Center",
-			"url":"http://player.vimeo.com/video/97444891"
-		}		
+		}
 	]
 };

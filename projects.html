@@ -77,31 +77,52 @@
     <div class="breadcrumbs">
         <div class="container">
             <h1 class="pull-left">Projects</h1>
+			   <script id="subnav-template" type="text/x-handlebars-template">
+							<ul class="pull-right breadcrumb">
+							   {{#each navigation}}
+								 {{#equal title "Research" }}
+								{{#each subnav}}
+								<li>
+									{{#equal title "Projects" }}
+									<a href="{{link}}" style="color:#225E9B;">{{title}}</a>
+									{{else}}
+									<a href="{{link}}">{{title}}</a>
+									{{/equal}}
+								</li>
+								{{/each}}
+								{{/equal}}
+							{{/each}}
+						</ul>
+			</script>
+					<div id="subnav"></div>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
     <div class="container content">		
- <!--/row-fluid-->    
-	<script id="teaching-template" type="text/x-handlebars-template">	
-		{{#each project}}	
-		<div class="row clients-page">	
-			<br>
-    		<div class="headline"><h4>{{title}}</h4></div>
-			<p><strong>{{instructors}}</strong></p>
-			<br>
-				<p>{{date}}</p><br>
-				<p>{{req}}</p>
-				{{#if summer}}<p>{{summer}}</p>{{/if}}
-				<p>{{level}}</p>
-				<p>{{description}}</p>
-				<p>{{contact}}</p>  
-			<br>
-        </div>
-		{{/each}}<!--/row-fluid-->   
-	</script>
-	<div id="courses"></div>
+    	<div class="row">
+        	<div class="col-md-9">
+            	<div class="headline"><h2>MIT GDC Projects</h2></div>
+
+
+			<div class="row clients-page">
+                    <div class="col-md-2">
+                        <img src="assets/img/safari_logo_chico.png" class="img-responsive hover-effect" alt="{{name}}" />
+                    </div>
+                    <div class="col-md-10">
+                        <h4>SAFARI</h4>
+                        <p>Situational Awareness framework that exploits different perspectives of the same financial data and assigns risk scores to entities (e.g. payment documents) to improve false positive ratios and assist the identification of fraudulent activity in huge and unlabeled financial data.</p>
+						<a href="safari.html" target="_blank">Visit project's page</a>
+						<br>
+                    </div>
+				</div>
+
+				
+
+    </div><!--/col-md-9-->
+
+         </div><!--/row-->        
     </div><!--/container-->		
     <!--=== End Content Part ===-->
 
@@ -262,9 +283,10 @@ head.ready(function () {
 		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
 		
-		var courses = $("#teaching-template");
-		var template = Handlebars.compile(courses.html());
-		$('#courses').html(template(teaching_data));
+		
+		var subnav = $("#subnav-template");
+		template = Handlebars.compile(subnav.html());
+		$('#subnav').html(template(nav_data));
 
  });
 })

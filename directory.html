@@ -80,6 +80,24 @@
     <div class="breadcrumbs">
         <div class="container">
             <h1 class="pull-left">Directory</h1>
+		   <script id="subnav-template" type="text/x-handlebars-template">
+							<ul class="pull-right breadcrumb">
+							   {{#each navigation}}
+								 {{#equal title "About" }}
+								{{#each subnav}}
+								<li>
+									{{#equal title "Directory" }}
+									<a href="{{link}}" style="color:#225E9B;">{{title}}</a>
+									{{else}}
+									<a href="{{link}}">{{title}}</a>
+									{{/equal}}
+								</li>
+								{{/each}}
+								{{/equal}}
+							{{/each}}
+						</ul>
+			</script>
+					<div id="subnav"></div>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
@@ -371,6 +389,10 @@ head.ready(function () {
 		var pagination = $("#pagination-template");
 		template = Handlebars.compile(pagination.html());
 		$('#pagination').html(template(directory_data));	
+		
+				var subnav = $("#subnav-template");
+		template = Handlebars.compile(subnav.html());
+		$('#subnav').html(template(nav_data));
 		
  });
 })	

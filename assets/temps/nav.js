@@ -4,50 +4,79 @@ var nav_data = {
          "title":"Home",
          "link":"index.html"
       },
-      {
-         "title":"Directory",
-         "link":"directory.html",
-      },
 {
-"title":"Leadership",
+"title":"About",
 "subnav":[
 {
-               "title":"Directors",
+               "title":"Mision/Vision",
+               "link":"#"
+            },
+{
+               "title":"Leadership",
                "link":"directors.html"
             },
 {
-               "title":"Advisory Board - Geospatial Technology",
-               "link":"ab_geospatialtech.html"
+	"title":"Advisory Board",
+     "link":"advisory_board_geotech.html"
+	},
+{
+               "title":"Directory",
+               "link":"directory.html"
+            }
+         ]
+},
+
+{
+"title":"Research",
+"subnav":[
+{
+               "title":"Projects",
+               "link":"projects.html"
             },
 {
-               "title":"Advisory Board - Geocoded Media",
-               "link":"ab_geocodedmedia.html"
+				"title":"Papers",
+				"link":"papers.html",
+	},
+{
+               "title":"Awards",
+               "link":"awards.html"
             },
 {
-               "title":"Advisory Board - Geocentric Cyber Security",
-               "link":"ab_geocentric.html"
-            },
-{
-               "title":"Advisory Board - Geolocated Supply Chain",
-               "link":"ab_geolocated_supplychain.html"
-            },
-{
-               "title":"Leadership Committee",
-               "link":"leadership_committee.html"
+               "title":"Software",
+               "link":"#"
             },
          ]
 },
+
 {
-"title":"Papers",
-"link":"papers.html",
+"title":"Courses",
+"subnav":[
+{
+               "title":"Online",
+               "link":"#"
+            },
+{
+               "title":"Summer courses",
+               "link":"summer_courses.html"
+            },
+{
+	"title":"Fall/Winter courses",
+     "link":"fallwinter_courses.html"
+	},
+         ]
 	},
 {
-"title":"Teaching",
-"link":"teaching.html",
-	},
+"title":"Talks",
+"subnav":[
 {
-"title":"Videos",
-"link":"videos.html",
+               "title":"Video",
+               "link":"videos.html"
+            },
+{
+               "title":"Audio",
+               "link":"#"
+            }
+         ]
 	},
 {
 "title":"Blog",

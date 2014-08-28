@@ -44,7 +44,7 @@
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-						{{#equal title "Papers" }}
+						{{#equal title "Research" }}
 						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
 						{{else}}
 						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
@@ -56,7 +56,7 @@
                 </ul>
 			</li>
 			{{else}}
-			{{#equal title "Papers" }}
+			{{#equal title "Research" }}
 			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
 			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
@@ -77,6 +77,24 @@
     <div class="breadcrumbs">
         <div class="container">
             <h1 class="pull-left">Papers</h1>
+						   <script id="subnav-template" type="text/x-handlebars-template">
+							<ul class="pull-right breadcrumb">
+							   {{#each navigation}}
+								 {{#equal title "Research" }}
+								{{#each subnav}}
+								<li>
+									{{#equal title "Papers" }}
+									<a href="{{link}}" style="color:#225E9B;">{{title}}</a>
+									{{else}}
+									<a href="{{link}}">{{title}}</a>
+									{{/equal}}
+								</li>
+								{{/each}}
+								{{/equal}}
+							{{/each}}
+						</ul>
+			</script>
+					<div id="subnav"></div>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
@@ -288,6 +306,9 @@ head.ready(function () {
 		var template = Handlebars.compile(sitemap.html());
 		$('#sitemap').html(template(footer_data));
 
+		var subnav = $("#subnav-template");
+		template = Handlebars.compile(subnav.html());
+		$('#subnav').html(template(nav_data));
  });
 })	
 </script>

@@ -4,7 +4,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Geospatial Data Center -Leadership Committee</title>
+    <title>Geospatial Data Center -Advisory Board</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -44,7 +44,7 @@
                     <ul class="nav navbar-nav">
         {{#each navigation}}
             {{#if subnav}}
-						{{#equal title "Leadership" }}
+						{{#equal title "About" }}
 						<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-		toggle" data-toggle="dropdown">{{ title }}</a>
 						{{else}}
 						<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" 		data-toggle="dropdown">{{ title }}</a>
@@ -56,7 +56,7 @@
                 </ul>
 			</li>
 			{{else}}
-			{{#equal title "Leadership" }}
+			{{#equal title "About" }}
 			<li class="active"><a href="{{ link }}">{{ title }}</a></li>
 			{{else}}
 			<li><a href="{{ link }}">{{ title }}</a></li>
@@ -78,6 +78,25 @@
     <div class="breadcrumbs">
         <div class="container">
             <h1 class="pull-left">Advisory Board</h1>
+						
+			   <script id="subnav-template" type="text/x-handlebars-template">
+							<ul class="pull-right breadcrumb">
+							   {{#each navigation}}
+								 {{#equal title "About" }}
+								{{#each subnav}}
+								<li>
+									{{#equal title "Advisory Board" }}
+									<a href="{{link}}" style="color:#225E9B;">{{title}}</a>
+									{{else}}
+									<a href="{{link}}">{{title}}</a>
+									{{/equal}}
+								</li>
+								{{/each}}
+								{{/equal}}
+							{{/each}}
+						</ul>
+			</script>
+					<div id="subnav"></div>
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
@@ -108,10 +127,22 @@
                 
             </div><!--/col-md-9-->
 
-        	<div class="col-md-3">
+	<div class="col-md-3">
             	<!-- Our Services -->
-
-            </div><!--/col-md-3-->
+                <div class="who margin-bottom-30">
+                    <div class="headline"><h2>Advisory Board </h2></div>
+                    <p>The MIT GDC Advisory Board is divided into the following 4 groups:</p>
+ 					
+ <script id="advisoryboard-template" type="text/x-handlebars-template">
+							<ul class="list-numbers">
+							{{#each advisory_board}}
+								<li><a href="{{link}}">{{title}}</a></li>
+							{{/each}}
+							</ul>
+</script>
+<div id="advisoryboard"></div>
+		</div>
+    </div><!--/col-md-3-->
         </div><!--/row-->        
     </div><!--/container-->		
     <!--=== End Content Part ===-->
@@ -288,6 +319,15 @@ head.ready(function () {
 	var committee = $("#committee-template");
 	var template = Handlebars.compile(committee.html());
 	$('#committee').html(template(advisors_data));		
+				
+	var subnav = $("#subnav-template");
+		template = Handlebars.compile(subnav.html());
+		$('#subnav').html(template(nav_data));
+		
+			var advisoryboard = $("#advisoryboard-template");
+		template = Handlebars.compile(advisoryboard.html());
+		$('#advisoryboard').html(template(advisoryboard_data));
+
 		
  });
 })	
